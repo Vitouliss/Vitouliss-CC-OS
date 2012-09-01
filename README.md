@@ -2,4 +2,4 @@
 
 Some stuff I coded...Just because I needed a better OS then the default one. 
 
-Is only used in my server...Please don't steal it just look at it and go: "ogm mkeing my own"
+It's only used in my server...Also keep in mind that near the end of the code....Is a mud hole sorry. 
