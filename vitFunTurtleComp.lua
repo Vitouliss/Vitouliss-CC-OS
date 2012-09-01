@@ -22,9 +22,9 @@ function setAlarm(timetostart,interval,endmes)
 	local input3 = read()
 	endmes = input3
 
-	for a = times,0,-interval do
+	for a = idiot,0,-inter do
 		if a == 0 then
-			print(endmes)
+			print(input3)
 		else
 			os.sleep(1)
 		end
@@ -47,10 +47,11 @@ else
 	term.clear()
 	term.setCursorPos(1,1)
 end
+end
 
 function rebootcomp()
 	print("Okey...Make sure you DID save your stuff before REBOOT!!")
-	os.Sleep(3)
+	os.sleep(3)
 	os.reboot()
 end
 
@@ -58,7 +59,7 @@ function setLabel(label)
 	print("What do you want it to be?:")
 	local input = read()
 	label = input
-	os.setComputerLabel(label)
+	os.setComputerLabel(input)
 end
 
 function getLabel()
@@ -74,7 +75,7 @@ function hangcomp(timeha)
 	local input = read()
 	local hur = tonumber(input)
 	timeha = hur
-	os.sleep(timeha)
+	os.sleep(hur)
 end
 
 function getPossibleUpdates()
@@ -89,7 +90,7 @@ function addNameToComp(name)
 	print("What is your name to add to the computer's memory?:")
 	local input = read()
 	name = input
-	table.insert(names,1,name)
+	table.insert(names,1,input)
 	print("Added the name to the computer.")
 	print('Type in "viewnames" to get all of the peeps')
 end
@@ -124,13 +125,15 @@ for _,v in pairs(hurstuff) do
 end
 end
 
-function mainhelp()
+function Mainhelp()
 print("The current commands are:")
 print("__________________________")
 for z,d in pairs(commands) do
+	amount = 0
+	amount = amount+1
 	print(d)
 	end
-	print("Total commands currently: "..z)
+	print("Total commands current: "..amount)
 end
 --[[
 
@@ -139,39 +142,40 @@ Ohhhhh NOOOOOOOOOOOOOOOO!
 --]]
 
 local masterinput = read()
-if masterinput == "sayrandomstuff"
+if masterinput == "sayrandomstuff" then
 	sayrandomstuff()
 	elseif masterinput == "clearall" then 
 		clearall()
-		elseif masterinput = "exitos" then
+		elseif masterinput == "exitos" then
 			exitos()
-			elseif masterinput = "addname" then
+			elseif masterinput == "addname" then
 				addNameToComp()
-				elseif masterinput = "viewnames" then
+				elseif masterinput == "viewnames" then
 					viewnamesdude()
-					elseif masterinput = "hang" then
+					elseif masterinput == "hang" then
 						hangcomp()
-						elseif masterinput = "time" then
+						elseif masterinput == "time" then
 							getMinecraftTime()
-							elseif masterinput = "alarm" then
+							elseif masterinput == "alarm" then
 								setAlarm()
-								elseif masterinput = "cputime" then
+								elseif masterinput == "cputime" then
 									getCPUTime()
-									elseif masterinput = "reboot" then
+									elseif masterinput == "reboot" then
 										rebootcomp()
-										elseif masterinput = "turnoff" then
+										elseif masterinput == "turnoff" then
 											shutthefrontdoor()
-											elseif masterinput = "setlabel" then
+											elseif masterinput == "setlabel" then
 												setLabel()
-												elseif masterinput = "getlabel" then
+												elseif masterinput == "getlabel" then
 													getLabel()
-													elseif masterinput = "getversion" then
+													elseif masterinput == "getversion" then
 														getVitoulissVersion()
-														elseif masterinput = "updates" then
+														elseif masterinput == "updates" then
 															getPossibleUpdates()
-															elseif masterinput = "help" then
+															elseif masterinput == "help" then
 																Mainhelp()
-																elseif masterinput = string.find("%s") then
+																elseif string.find(masterinput) == "%s" then
 																print("Going to say anything?")
-															else 
+															else
 																print("I have no idea what you just said...Type in help if you need help.")
+															end
