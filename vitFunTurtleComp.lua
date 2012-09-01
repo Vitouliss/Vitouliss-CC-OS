@@ -40,7 +40,7 @@ function shutthefrontdoor()
 	local shutinput = read()
 	if shutinput == "yes" then
 	print("Shutting down in 2 seconds.")
-	os.sleep(timetoshutdown)
+	os.sleep(2)
 	os.shutdown()
 else
 	print("NOT Shutting down. Just going to clear the screen.")
@@ -96,9 +96,8 @@ function addNameToComp(name)
 end
 
 function viewnamesdude()
-	for a,b in pairs(names) do
+	for _,b in pairs(names) do
 		print("Names: "..b)
-		print("Total added: "..a)
 	end
 end
 
