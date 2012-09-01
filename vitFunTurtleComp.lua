@@ -174,8 +174,6 @@ if masterinput == "sayrandomstuff" then
 															getPossibleUpdates()
 															elseif masterinput == "help" then
 																Mainhelp()
-																elseif string.find(masterinput) == "%s" then
-																print("Going to say anything?")
 															else
 																print("I have no idea what you just said...Type in help if you need help.")
 															end
