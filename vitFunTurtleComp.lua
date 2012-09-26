@@ -127,8 +127,8 @@ end
 function Mainhelp()
 print("The current commands are:")
 print("__________________________")
+amount = 0
 for z,d in pairs(commands) do
-	amount = 0
 	amount = amount+1
 	print(d)
 	end
