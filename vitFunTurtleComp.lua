@@ -1,7 +1,7 @@
-localversion = "0.1" 
+localversion = "0.2" 
 names = {}
 commands = {"sayrandomstuff","getlabel","setlabel","hang","time","clearall","reboot","turnoff",
-"alarm","cputime","addname","viewnames","getversion","help","updates","exitos"}
+"alarm","cputime","addname","viewnames","getversion","help","updates","exitos", "DaysToHours"}
 
 function getMinecraftTime()
 	print("The current time is "..os.time())
@@ -127,13 +127,22 @@ end
 function Mainhelp()
 print("The current commands are:")
 print("__________________________")
-amount = 0
 for z,d in pairs(commands) do
+	amount = 0
 	amount = amount+1
 	print(d)
 	end
 	print("Total commands current: "..amount)
 end
+
+function DaysToHours()
+	print("# of days to convert to hours?")
+	local butts = read()
+	butts = tonumber(butts)
+	poop = butts*24
+	print("They are "..poop.." days in "..butts.." hours")
+end
+
 --[[
 
 Ohhhhh NOOOOOOOOOOOOOOOO! 
@@ -173,6 +182,8 @@ if masterinput == "sayrandomstuff" then
 															getPossibleUpdates()
 															elseif masterinput == "help" then
 																Mainhelp()
+															elseif masterinput == "daystohours" then
+																DaysToHours()
 															else
 																print("I have no idea what you just said...Type in help if you need help.")
 															end
