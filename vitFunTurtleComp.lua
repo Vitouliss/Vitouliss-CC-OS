@@ -140,7 +140,7 @@ function DaysToHours()
 	local butts = read()
 	butts = tonumber(butts)
 	poop = butts*24
-	print("They are "..poop.." days in "..butts.." hours")
+	print("There are "..poop.." days in "..butts.." hours")
 end
 
 --[[
