@@ -1,4 +1,4 @@
-# Vitouliss Computercraft-OS thingy
+# Vitouliss Computercraft-OS (For Tekkit 3.1.1)
 
 Some stuff I coded...Just because I needed a better OS then the default one and because I just want my own. 
 
@@ -13,4 +13,4 @@ If you need to list all the commands just type in: "help" without the quotes.
 
 # What are you doing with this currently?
 
-Well, I'm trying to make it into a Operating system if School and indolence did not get in the way. 
+Well, I'm trying to make it into a Operating system if school and indolence did not get in the way. 
